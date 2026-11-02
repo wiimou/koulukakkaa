@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kraftink</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: Times New Roman, serif;
+                background-color: #000000f4;
+            }
+
+            .navbar {
+                position: relative;
+                background-color: #727272;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0px 20px;
+                z-index: 1000;
+            }
+
+            .logo-container {
+                position: relative;
+            }
+
+            .logo {
+                height: 100px;
+                position: absolute;
+                top: -10%;
+                display: block;
+            }
+
+            .nav-links {
+                display: flex;
+                gap: 20px;
+                margin-left: auto;
+            }
+
+            .nav-links a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 16px;
+                transition: color 0.3s ease;
+            }
+
+            .masonry-gallery {
+  column-count: 3; /* Sarakkeiden määrä isommilla näytöillä */
+  column-gap: 16px; /* Sarakkeiden välinen etäisyys */
+  padding: 20px;
+}
+
+.masonry-item {
+  break-inside: avoid; /* Estää kuvan katkeamisen sarakkeen vaihtuessa */
+  margin-bottom: 16px; /* Rivien välinen etäisyys */
+}
+
+.masonry-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.masonry-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsiivisuus: vähennä sarakkeita mobiilissa */
+@media (max-width: 768px) {
+  .masonry-gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .masonry-gallery {
+    column-count: 1;
+  }
+}
+        </style>
+        </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <img src="img/kraftink_logo.png" alt="Logo" class="logo">
+            </div>
+
+            <div class="nav-links">
+                <a href="kraftink.html">Etusivu</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="about_us.html">ABOUT US</a>
+                <a href="usein_kysyttya.html">Usein kysyttyä</a>
+                <a href="ota_yhteytta.html">Ota yhteyttä</a>
+            </div>
+        </nav>
+        
+        <div class="masonry-gallery">
+            <div class="masonry-item"><img src="img/kyynerpia.JPEG" alt="kyynerpia"></div>
+            <div class="masonry-item"><img src="img/liljat2.png" alt="liljat2"></div>
+            <div class="masonry-item"><img src="img/67domino.png" alt="67domino"></div>
+            <div class="masonry-item"><img src="img/alyytko2.png" alt="alyytko2"></div>
+            <div class="masonry-item"><img src="img/pollo.JPEG" alt="pollo"></div>
+            <div class="masonry-item"><img src="img/puska.JPEG" alt="puska"></div>
+            <div class="masonry-item">
+                <video src="img/beautyandrage.MOV" autoplay loop muted playsinline></video></div>
+            <div class="masonry-item"><img src="img/liekkisydan2.JPEG" alt="liekkisydan2"></div>
+            <div class="masonry-item"><img src="img/kukkaakukkaakukkaa.JPEG" alt="kukkaakukkaakukkaa"></div>
+            <div class="masonry-item"><img src="img/heartagram.JPEG" alt="heartagram"></div>
+            <div class="masonry-item"><img src="img/miekkahoro.JPEG" alt="miekkahoro"></div>
+            <div class="masonry-item"><img src="img/withlovealways.JPEG" alt="withlovealways"></div>
+            <div class="masonry-item"><img src="img/tekstii.JPEG" alt="tekstii"></div>
+            <div class="masonry-item"><img src="img/pioni.JPEG" alt="pioni"></div>
+            <div class="masonry-item"><img src="img/tatu2.JPEG" alt="tatu2"></div>
+            <div class="masonry-item"><img src="img/tahdettahdet.JPEG" alt="tahdettahdet"></div>
+            <div class="masonry-item"><img src="img/ketju.JPEG" alt="ketju"></div>
+            <div class="masonry-item"><img src="img/paivankakkara_kasi.JPEG" alt="paivankakkara_kasi"></div>
+            <div class="masonry-item"><img src="img/mama1.JPEG" alt="mama1"></div>
+            <div class="masonry-item"><img src="img/iina_kasi.JPEG" alt="iina_kasi"></div>
+            <div class="masonry-item"><img src="img/elamaontivolia.JPEG" alt="elamaontivolia"></div>
+            <div class="masonry-item"><img src="img/haisuli.JPEG" alt="haisuli"></div>  
+            <div class="masonry-item"><img src="img/miggihiiri.JPEG" alt="miggihiiri"></div>
+            <div class="masonry-item"><img src="img/liekkisydan1.JPEG" alt="liekkisydan1"></div>
+            <div class="masonry-item"><img src="img/kuuhoro.JPEG" alt="kuuhoro"></div>
+            <div class="masonry-item"><img src="img/lepakko.JPEG" alt="lepakko"></div>
+            <div class="masonry-item"><img src="img/mimir.JPEG" alt="mimir"></div>
+            <div class="masonry-item"><img src="img/pysyvitussa.JPEG" alt="pysyvitussa"></div>
+            <div class="masonry-item"><img src="img/sydamet_pvm.JPEG" alt="sydamet_pvm"></div>
+            <div class="masonry-item"><img src="img/thinnn.JPEG" alt="thinnn"></div>
+            <div class="masonry-item"><img src="img/wing.JPEG" alt="wing"></div>
+            <div class="masonry-item"><img src="img/tassut.JPEG" alt="tassut"></div>
+            <div class="masonry-item"><img src="img/tatu1.JPEG" alt="tatu1"></div>
+            <div class="masonry-item"><img src="img/otokat.JPEG" alt="otokat"></div>
+            <div class="masonry-item"><img src="img/mama2.JPEG" alt="mama2"></div>
+            <div class="masonry-item"><img src="img/kaarme.JPEG" alt="kaarme"></div>
+            <div class="masonry-item"><img src="img/pers.JPEG" alt="pers"></div>
+            <div class="masonry-item"><img src="img/timu.JPEG" alt="timu"></div>
+            <div class="masonry-item"><img src="img/transmutaatio.JPEG" alt="transmutaatio"></div>
+            <div class="masonry-item"><img src="img/pyllis1.JPEG" alt="pyllis1"></div>
+            <div class="masonry-item"><img src="img/rusetti_risti.JPEG" alt="rusetti_risti"></div>
+            <div class="masonry-item"><img src="img/nvm.JPEG" alt="nvm"></div>
+            <div class="masonry-item"><img src="img/norsu.JPEG" alt="norsu"></div>
+        </div>
+    </body>
