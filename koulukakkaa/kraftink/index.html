@@ -1,0 +1,72 @@
+<!DOCTYPE html> <!--alkujulistukset-->
+<html lang="fi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kraftink</title>
+
+        <!--sivun yleisilme-->
+        <link rel="stylesheet" href="css/tyyli.css">
+
+        <!--erikseen sivukohtainen tyylittely-->
+        <style>
+            .main-container {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+            }
+            .content-box {
+                background-color: rgba(0,0,0,0.8);
+                color: #ffffff;
+                padding: 40px;
+                border-radius: 10px;
+                max-width: 600px;
+                text-align: center;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+            }
+            .content-box h1 {
+                margin-top: 0;
+                font-size: 2.5rem;
+            }
+            .content-box p {
+                font-size: 1.2rem;
+                line-height: 1.6;
+            }
+            .button-link {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #727272;
+                color: #ffffff;
+                text-decoration: none;
+                border-radius: 0px;
+                transition: background-color 0.3s ease;
+            }
+        </style>
+        </head>
+
+    <!--navigaatiopalkin jutut, mm. logo, painikkeet-->
+    <body>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <img src="img\kraftink_logo.png" alt="Logo" class="logo">
+            </div>
+
+            <div class="nav-links"> <!--navigointilinkit-->
+                <a href="index.html">Etusivu</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="about_us.html">ABOUT US</a>
+                <a href="usein_kysyttya.html">Usein kysyttyä</a>
+                <a href="ota_yhteytta.html">Ota yhteyttä</a>
+          </div>
+        </nav>
+
+        <!--hauska letkautus ja linkki ajanvaraussivulle-->
+        <div class="main-container">
+            <div class="content-box">
+                <p>darling, is it time for tattoo yet?</p>
+                <a href="ota_yhteytta.html" class="button-link">Varaa aika ♡</a>
+            </div>
+        </div>
+    </body>
