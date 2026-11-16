@@ -9,8 +9,32 @@
 
         <!--sivukohtainen tyylittely-->
         <style>
+            .main-container {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+            }
+            .content-box {
+                background-color: rgba(0,0,0,0.8);
+                color: #ffffff;
+                padding: 40px;
+                border-radius: 10px;
+                max-width: 600px;
+                text-align: center;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+            }
+            .content-box h1 {
+                margin-top: 0;
+                font-size: 2.5rem;
+            }
+            .content-box p {
+                font-size: 1.2rem;
+                line-height: 1.6;
+            }
         </style>
-        </head>
+    </head>
     <body>
         <nav class="navbar">
             <div class="navbar-container">
@@ -25,4 +49,58 @@
                 <a href="ota_yhteytta.html">Ota yhteyttä</a>
             </div>
         </nav>
+
+        <div class="main-container">
+            <div class="content-box">
+                <p>Yhteydenottolomake</p>
+
+                <form id="yhteydenottoLomake">
+                    <label for="eNimi">Etunimi:</label>
+                    <input type="text" id="eNimi" name="eNimi" required><br><br>
+
+                    <label for="sNimi">Sukunimi:</label>
+                    <input type="text" id="sNimi" name="sNimi" required><br><br>
+
+                    <label for="viesti">Viesti:</label><br>
+                    <textarea id="viesti" name="viesti" rows="4" cols="50" required></textarea><br><br>
+
+                    <input type="submit" value="Lähetä">
+                </form>
+
+                <p id="vahvistus" style="color: #ffffff; font-weight: bold; margin-top: 15px;"></p>
+            </div>
+        </div>
+
+        <!--en jaksanut kunnon tsydeemiä tehdä tähän niin se lataa vaan annetut tiedot tekstitiedostona,
+        mutta jos sivut olisivat toiminnassatoiminnassa, voisi viestit ohjata mm. sähköpostitse-->
+        <script>
+            document.getElementById('yhteydenottoLomake').addEventListener('submit', function(event) {
+                event.preventDefault(); //estää sivun uudelleenlatauksen
+
+                const eNimi = document.getElementById('eNimi').value.trim();
+                const sNimi = document.getElementById('sNimi').value.trim();
+                const viesti = document.getElementById('viesti').value.trim();
+                const aika = new Date().toLocaleString('fi-FI');
+
+                //muodostetaan tekstitiedoston sisältö
+                const sisalto = 
+                    "----------------------------------------\n" +
+                    "Aika: " + aika + "\n" +
+                    "Nimi: " + eNimi + " " + sNimi + "\n" +
+                    "Viesti:\n" + viesti + "\n";
+
+                //luodaan .txt-tiedosto ja ladataan se automaattisesti
+                const blob = new Blob([sisalto], { type: 'text/plain;charset=utf-8' });
+                const linkki = document.createElement('a');
+                linkki.href = URL.createObjectURL(blob);
+                linkki.download = 'yhteydenotto_' + eNimi + '_' + sNimi + '.txt';
+                linkki.click();
+                URL.revokeObjectURL(linkki.href);
+
+                //näytetään vahvistus ja tyhjennetään lomake uutta yhteydenottoa varten
+                document.getElementById('vahvistus').textContent = 'Kiitos ' + eNimi + '! Palaan tatuointisi pariin pikimmiten! ˶ᵔ ᵕ ᵔ˶';
+                this.reset();
+            });
+        </script>
     </body>
+</html>
